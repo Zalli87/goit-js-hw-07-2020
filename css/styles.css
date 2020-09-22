@@ -15,7 +15,7 @@ a {
 }
 
 #validation-input.valid {
-  border-color: #4caf50;
+  border: 3px solid #4caf50;
 }
 
 #validation-input.invalid {
