@@ -1,5 +1,16 @@
 const inputNumberEl = document.querySelector("#controls > input");
 
+inputNumberEl.addEventListener("blur", onInputValid);
+
+function onInputValid(event) {
+  if (event.currentTarget.value <= Number(event.currentTarget.max)) {
+    return;
+  }
+  alert("Введите число от 0 до 100");
+  event.currentTarget.value = "";
+  boxContainerEl.innerHTML = "";
+}
+
 const createBtnEL = document.querySelector('[data-action="render"]');
 createBtnEL.addEventListener("click", onCreateBtnClick);
 
